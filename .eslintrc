@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb/base",
+  "globals": {
+    "angular": true
+  },
+  "rules": {
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "comma-dangle": [2, "never"],
+    "strict": 0, // controls location of Use Strict Directives
+    "space-before-function-paren": [2, { "anonymous": "never", "named": "never" }]
+  }
+}
