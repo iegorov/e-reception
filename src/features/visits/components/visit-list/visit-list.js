@@ -1,4 +1,8 @@
 export default class VisitList {
+  constructor(visitsService) {
+    this.visitsService = visitsService;
+    console.log(this.visitsService.getTasks());
+  }
   static get selector() {
     return 'visitList';
   }
@@ -11,4 +15,4 @@ export default class VisitList {
   }
 }
 
-VisitList.$inject = [];
+VisitList.$inject = ['visitsService'];
