@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["clsx", "tailwindcss"]
+  "cSpell.words": ["clsx", "tailwindcss"],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }
