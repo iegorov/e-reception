@@ -9,6 +9,6 @@
     "@typescript-eslint/explicit-function-return-type": "error"
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "plugin:react-hooks/recommended"],
   "root": true
 }
