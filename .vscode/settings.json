@@ -8,5 +8,6 @@
   },
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "asciidoc.antora.enableAntoraSupport": true
 }
