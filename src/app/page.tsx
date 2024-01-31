@@ -13,7 +13,7 @@ export default function Home(): JSX.Element | null {
       </h2>
       <div>
         <Button className='ml-16 mt-8' onClick={handleClick}>
-          Click me
+          Click on me
         </Button>
       </div>
     </>
