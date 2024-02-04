@@ -32,7 +32,7 @@ export default function RootLayout({
         <header>
           <MainNav />
         </header>
-        <main>{children}</main>
+        <main className='m-8'>{children}</main>
       </body>
     </html>
   );
