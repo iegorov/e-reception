@@ -1,0 +1,7 @@
+== Visitors
+
+Acceptance criteria:
+
+* User can open Visitors page via /visitors path in browser
+* User can open Visitors page via Visitors link in global header
+* User can see title and subtitle on Visitors page

@@ -1,6 +1,6 @@
 # E-Reception
 
-To assist the secretary
+Visitor management system for the secretary.
 
 ## Getting Started
 
