@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["clsx", "tailwindcss"],
+  "cSpell.words": ["clsx", "tailwindcss", "Кривощековская"],
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -9,5 +9,6 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "asciidoc.antora.enableAntoraSupport": true
+  "asciidoc.antora.enableAntoraSupport": true,
+  "editor.formatOnSave": true
 }
