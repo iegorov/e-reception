@@ -8,7 +8,7 @@ export function MainNav(): JSX.Element | null {
   const pathname = usePathname();
 
   return (
-    <nav className='flex h-16 items-center gap-x-6 border-b px-8 font-medium'>
+    <nav className='flex h-16 items-center gap-x-6 border-b px-4 font-medium'>
       <Link
         className={cn(
           'hover:text-foreground/80',
