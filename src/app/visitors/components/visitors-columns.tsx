@@ -1,32 +1,43 @@
-import { ColumnDef } from '@tanstack/react-table';
+'use client';
 
-export interface Visitor {
-  name: string;
-  birthDate: string;
-  email: string;
-  phone: string;
-  address: string;
-}
+import { ColumnDef } from '@tanstack/react-table';
+import { Visitor } from '../data/visitor-schema';
+import { DataTableColumnHeader } from '@/components/data-table-column-header';
 
 export const columns: ColumnDef<Visitor>[] = [
   {
     accessorKey: 'name',
-    header: 'Name',
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title='Name' />
+    ),
+    cell: ({ row }) => {
+      const { firstName, middleName, lastName } = row.original;
+
+      return `${lastName} ${firstName} ${middleName}`;
+    },
   },
   {
     accessorKey: 'birthDate',
-    header: 'Birth date',
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title='Birth date' />
+    ),
   },
   {
     accessorKey: 'email',
-    header: 'Email',
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title='Email' />
+    ),
   },
   {
     accessorKey: 'phone',
-    header: 'Phone',
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title='Phone' />
+    ),
   },
   {
     accessorKey: 'address',
-    header: 'Address',
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title='Address' />
+    ),
   },
 ];

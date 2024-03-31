@@ -1,17 +1,19 @@
+import { promises as fs } from 'fs';
+import path from 'path';
+import { z } from 'zod';
+
 import { DataTable } from '@/components/data-table';
-import { Visitor, columns } from './components/visitors-columns';
+import { columns } from './components/visitors-columns';
+import { Visitor, visitorSchema } from './data/visitor-schema';
 
 async function getVisitors(): Promise<Visitor[]> {
-  // Fetch data from your API here.
-  return [
-    {
-      name: 'Иванов Иван Иванович',
-      birthDate: '01.03.1980',
-      email: 'test@mail.ru',
-      phone: '8 (915) 050-46-72',
-      address: 'Новосибирск, ул. Кривощековская, 15, кв.1',
-    },
-  ];
+  const data = await fs.readFile(
+    path.join(process.cwd(), 'src/app/visitors/data/visitors.json'),
+  );
+
+  const visitors = JSON.parse(data.toString());
+
+  return z.array(visitorSchema).parse(visitors);
 }
 
 export default async function Visitors(): Promise<JSX.Element> {
