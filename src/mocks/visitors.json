@@ -1,0 +1,32 @@
+[
+  {
+    "id": "11111",
+    "firstName": "Иван",
+    "middleName": "Иванович",
+    "lastName": "Иванов",
+    "birthDate": "01.03.1980",
+    "email": "i.ivanov@mail.ru",
+    "phone": "8 (915) 050-46-72",
+    "address": "Новосибирск, ул. Кривощековская, 15, кв.1"
+  },
+  {
+    "id": "22222",
+    "firstName": "Пётр",
+    "middleName": "Петрович",
+    "lastName": "Петров",
+    "birthDate": "12.05.1976",
+    "email": "p.petrov@mail.ru",
+    "phone": "8 (915) 150-36-75",
+    "address": "Новосибирск, ул. Демакова, 17/1, кв.11"
+  },
+  {
+    "id": "333333",
+    "firstName": "Сидор",
+    "middleName": "Сидорович",
+    "lastName": "Сидоров",
+    "birthDate": "01.03.1980",
+    "email": "s.sidor@mail.ru",
+    "phone": "8 (915) 020-49-77",
+    "address": "Новосибирск, ул. Сибревкома, 2, кв.25"
+  }
+]
