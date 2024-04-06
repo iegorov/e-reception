@@ -4,11 +4,11 @@ import { z } from 'zod';
 
 import { DataTable } from '@/components/data-table';
 import { columns } from './components/visitors-columns';
-import { Visitor, visitorSchema } from './data/visitor-schema';
+import { Visitor, visitorSchema } from '@/models/visitor';
 
 async function getVisitors(): Promise<Visitor[]> {
   const data = await fs.readFile(
-    path.join(process.cwd(), 'src/app/visitors/data/visitors.json'),
+    path.join(process.cwd(), 'src/mocks/visitors.json'),
   );
 
   const visitors = JSON.parse(data.toString());
@@ -26,7 +26,6 @@ export default async function Visitors(): Promise<JSX.Element> {
         <p className='text-muted-foreground'>Here's a list of your visitors!</p>
       </div>
       <div className='mt-8 flex flex-col gap-4'>
-        <div>UserNav</div>
         <DataTable columns={columns} data={visitors} />
       </div>
     </>

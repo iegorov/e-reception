@@ -1,7 +1,7 @@
 'use client';
 
 import { ColumnDef } from '@tanstack/react-table';
-import { Visitor } from '../data/visitor-schema';
+import { Visitor } from '@/models/visitor';
 import { DataTableColumnHeader } from '@/components/data-table-column-header';
 
 export const columns: ColumnDef<Visitor>[] = [
