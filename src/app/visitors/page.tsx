@@ -4,7 +4,7 @@ import { z } from 'zod';
 
 import { DataTable } from '@/components/data-table';
 import { columns } from './components/visitors-columns';
-import { Visitor, visitorSchema } from '@/models/visitor';
+import { Visitor, visitorSchema } from '@/models/visitor-schema';
 
 async function getVisitors(): Promise<Visitor[]> {
   const data = await fs.readFile(
