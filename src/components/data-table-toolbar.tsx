@@ -4,6 +4,7 @@ import { Table } from '@tanstack/react-table';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { Cross2Icon } from '@radix-ui/react-icons';
+import { DataTableViewOptions } from './data-table-view-options';
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
@@ -36,6 +37,7 @@ export function DataTableToolbar<TData>({
           </Button>
         )}
       </div>
+      <DataTableViewOptions table={table} />
     </div>
   );
 }
