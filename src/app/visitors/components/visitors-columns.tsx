@@ -64,17 +64,20 @@ export const columns: ColumnDef<Visitor>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Email' />
     ),
+    enableSorting: false,
   },
   {
     accessorKey: 'phone',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Phone' />
     ),
+    enableSorting: false,
   },
   {
     accessorKey: 'address',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Address' />
     ),
+    enableSorting: false,
   },
 ];
