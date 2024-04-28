@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui';
 
 export default function Home(): JSX.Element | null {
   const handleClick = (): void => {
