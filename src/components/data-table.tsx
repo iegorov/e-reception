@@ -20,7 +20,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from '@/components/ui';
 import { DataTablePagination } from './data-table-pagination';
 import React from 'react';
 import { DataTableToolbar } from './data-table-toolbar';
