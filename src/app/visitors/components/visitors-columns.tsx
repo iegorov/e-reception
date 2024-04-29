@@ -3,7 +3,8 @@
 import { ColumnDef } from '@tanstack/react-table';
 import { Visitor } from '@/models/visitor-schema';
 import { DataTableColumnHeader } from '@/components/data-table-column-header';
-import { Checkbox } from '@/components/ui/checkbox';
+import { Checkbox } from '@/components/ui';
+import { format } from 'date-fns';
 
 export const columns: ColumnDef<Visitor>[] = [
   {
@@ -31,7 +32,12 @@ export const columns: ColumnDef<Visitor>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: 'name',
+    id: 'name',
+    accessorFn: (originalRow) => {
+      const { firstName, middleName, lastName } = originalRow;
+
+      return `${lastName} ${firstName} ${middleName}`;
+    },
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Name' />
     ),
@@ -46,23 +52,32 @@ export const columns: ColumnDef<Visitor>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Birth date' />
     ),
+    cell: ({ row }) => {
+      const { birthDate } = row.original;
+      const formattedDate = format(birthDate, 'dd.MM.yyyy');
+
+      return `${formattedDate}`;
+    },
   },
   {
     accessorKey: 'email',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Email' />
     ),
+    enableSorting: false,
   },
   {
     accessorKey: 'phone',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Phone' />
     ),
+    enableSorting: false,
   },
   {
     accessorKey: 'address',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Address' />
     ),
+    enableSorting: false,
   },
 ];
