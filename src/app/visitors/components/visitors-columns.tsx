@@ -3,7 +3,7 @@
 import { ColumnDef } from '@tanstack/react-table';
 import { Visitor } from '@/models/visitor-schema';
 import { DataTableColumnHeader } from '@/components/data-table-column-header';
-import { Checkbox } from '@/components/ui/checkbox';
+import { Checkbox } from '@/components/ui';
 import { format } from 'date-fns';
 
 export const columns: ColumnDef<Visitor>[] = [

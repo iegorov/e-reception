@@ -6,8 +6,8 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from './ui/dropdown-menu';
-import { Button } from './ui/button';
+} from '@/components/ui';
+import { Button } from '@/components/ui';
 import {
   ArrowDownIcon,
   ArrowUpIcon,

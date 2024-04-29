@@ -1,8 +1,8 @@
 'use client';
 
 import { Table } from '@tanstack/react-table';
-import { Input } from './ui/input';
-import { Button } from './ui/button';
+import { Input } from '@/components/ui';
+import { Button } from '@/components/ui';
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { DataTableViewOptions } from './data-table-view-options';
 
